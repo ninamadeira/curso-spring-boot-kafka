@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  database:
+    image: postgres
+    environment:
+      - "POSTGRES_PASSWORD=1234"
+      - "POSTGRES_DB=car_post_analytics"
+    ports:
+      - 5443:5432
+    volumes:
+      - pg-data:/data/postgres3
+volumes:
+  pg-data:
+    driver: local
